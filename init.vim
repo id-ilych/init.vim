@@ -49,6 +49,7 @@ colorscheme scheakur
 if !exists( "commands_aliases_inited" )
   let commands_aliases_inited = 1
   command W w
+  command Q q
 endif
 
 " hotkeys

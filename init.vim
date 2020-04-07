@@ -41,6 +41,7 @@ let g:netrw_banner=0
 let g:netrw_browse_split=0
 let g:netrw_winsize=32
 let g:netrw_dirhistmax=0
+let g:netrw_preview = 1
 
 set background=light
 colorscheme scheakur

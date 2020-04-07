@@ -19,7 +19,7 @@ set ignorecase
 set cindent
 set smartindent
 set smarttab
-set noexpandtab
+set expandtab
 set softtabstop=4
 set tabstop=4
 set shiftwidth=4
@@ -46,8 +46,8 @@ set background=light
 colorscheme scheakur
 
 if !exists( "commands_aliases_inited" )
-	let commands_aliases_inited = 1
-	command W w
+  let commands_aliases_inited = 1
+  command W w
 endif
 
 " hotkeys
@@ -64,16 +64,16 @@ vmap > >gv
 
 " search with */# for selected text
 vnoremap <silent> * :<C-U>
-			\let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
-			\gvy/<C-R><C-R>=substitute(
-			\escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
-			\gV:call setreg('"', old_reg, old_regtype)<CR>
+  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+  \gvy/<C-R><C-R>=substitute(
+  \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+  \gV:call setreg('"', old_reg, old_regtype)<CR>
 
 vnoremap <silent> # :<C-U>
-			\let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
-			\gvy?<C-R><C-R>=substitute(
-			\escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
-			\gV:call setreg('"', old_reg, old_regtype)<CR>
+  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+  \gvy?<C-R><C-R>=substitute(
+  \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+  \gV:call setreg('"', old_reg, old_regtype)<CR>
 
 " easymotion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
@@ -89,6 +89,6 @@ let g:CommandTFileScanner = 'git'
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
 if executable('rg')
-	let g:ackprg = 'rg --vimgrep'
+  let g:ackprg = 'rg --vimgrep'
 endif
 

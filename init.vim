@@ -90,6 +90,9 @@ map <Leader>k <Plug>(easymotion-k)
 
 " command-t
 let g:CommandTFileScanner = 'git'
+let g:CommandTGitIncludeUntracked = 1
+let g:CommandTTraverseSCM = 'pwd'
+nmap <silent> <Leader>f <Plug>(CommandTLine)
 
 " ack
 cnoreabbrev Ack Ack!

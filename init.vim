@@ -13,6 +13,7 @@ set nocompatible
 filetype plugin on
 set number
 set ruler
+set nowrap
 set hlsearch
 set incsearch
 set ignorecase

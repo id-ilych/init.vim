@@ -53,7 +53,7 @@ if !exists( "commands_aliases_inited" )
 endif
 
 " hotkeys
-nmap <C-L> :Explore<CR>
+nmap <C-L> m':Explore %:h<CR>
 nmap th :tabfirst<CR>
 nmap tk :tabprev<CR>
 nmap tj :tabnext<CR>

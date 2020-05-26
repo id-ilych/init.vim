@@ -65,10 +65,8 @@ nmap tm :tabm<CR>
 nmap td :tabclose<CR>
 vmap < <gv
 vmap > >gv
-" copy to system clipboard (Mac OS X)
-if executable('pbcopy')
-    vmap '' :w !pbcopy<CR><CR>
-end
+" copy to system clipboard
+vmap '' "+y
 
 " search with */# for selected text
 vnoremap <silent> * :<C-U>

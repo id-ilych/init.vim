@@ -67,6 +67,7 @@ vmap < <gv
 vmap > >gv
 " copy to system clipboard
 vmap '' "+y
+map <Leader>ff :let @+=expand('%')<CR>
 
 " search with */# for selected text
 vnoremap <silent> * :<C-U>

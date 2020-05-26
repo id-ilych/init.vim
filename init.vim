@@ -6,6 +6,7 @@ Plug 'scheakur/vim-scheakur'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-surround'
 Plug 'slim-template/vim-slim'
+Plug 'jparise/vim-graphql'
 
 call plug#end()
 

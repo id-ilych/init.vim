@@ -50,6 +50,12 @@ let g:netrw_dirhistmax=0
 let g:netrw_preview = 1
 
 set background=light
+
+" highlight trailing whitespaces
+:autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+:highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+:match ExtraWhitespace /\s\+$/
+
 colorscheme scheakur
 
 if !exists( "commands_aliases_inited" )

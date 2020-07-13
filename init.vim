@@ -67,8 +67,8 @@ endif
 " hotkeys
 nmap <C-L> m':Explore %:h<CR>
 nmap th :tabfirst<CR>
-nmap tk :tabprev<CR>
-nmap tj :tabnext<CR>
+nmap tk :tabnext<CR>
+nmap tj :tabprev<CR>
 nmap tl :tablast<CR>
 nmap tt :tabedit<CR>
 nmap tm :tabm<CR>

@@ -5,6 +5,7 @@ Plug 'wincent/command-t', {'do': 'cd ruby/command-t/ext/command-t && ruby extcon
 Plug 'scheakur/vim-scheakur'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-vinegar'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'slim-template/vim-slim'
 Plug 'jparise/vim-graphql'

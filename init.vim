@@ -44,6 +44,8 @@ set scrolloff=6
 set formatoptions-=o
 set virtualedit=all
 set cursorline
+set foldmethod=indent
+set foldlevelstart=20
 let g:netrw_liststyle=0
 let g:netrw_banner=0
 let g:netrw_browse_split=0

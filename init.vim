@@ -9,6 +9,8 @@ Plug 'tpope/vim-vinegar'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'slim-template/vim-slim'
 Plug 'jparise/vim-graphql'
+Plug 'tpope/vim-endwise'
+Plug 'jgdavey/vim-blockle'
 
 call plug#end()
 

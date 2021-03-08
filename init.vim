@@ -75,7 +75,8 @@ nmap tk :tabnext<CR>
 nmap tj :tabprev<CR>
 nmap tl :tablast<CR>
 nmap tt :tabedit<CR>
-nmap tm :tabm<CR>
+nmap tmh :-tabm<CR>
+nmap tml :+tabm<CR>
 nmap td :tabclose<CR>
 vmap < <gv
 vmap > >gv

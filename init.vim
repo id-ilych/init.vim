@@ -117,3 +117,6 @@ if executable('rg')
   let g:ackprg = 'rg --vimgrep'
 endif
 
+" vim-blockle
+let g:blockle_mapping = '<Leader>]'
+

@@ -60,7 +60,10 @@ set background=light
 :highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 :match ExtraWhitespace /\s\+$/
 
-colorscheme scheakur
+colorscheme afterglow
+
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
 
 if !exists( "commands_aliases_inited" )
   let commands_aliases_inited = 1

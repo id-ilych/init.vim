@@ -1,7 +1,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'easymotion/vim-easymotion'
-Plug 'wincent/command-t', {'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'}
 Plug 'scheakur/vim-scheakur'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-surround'
@@ -11,6 +10,8 @@ Plug 'slim-template/vim-slim'
 Plug 'jparise/vim-graphql'
 Plug 'tpope/vim-endwise'
 Plug 'jgdavey/vim-blockle'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -110,11 +111,9 @@ let g:EasyMotion_smartcase = 1
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
-" command-t
-let g:CommandTFileScanner = 'git'
-let g:CommandTGitIncludeUntracked = 1
-let g:CommandTTraverseSCM = 'pwd'
-nmap <silent> <Leader>f <Plug>(CommandTLine)
+" fzf
+map <Leader>t :Files<CR>
+map <Leader>b :Buffers<CR>
 
 " ack
 cnoreabbrev Ack Ack!

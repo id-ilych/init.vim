@@ -12,6 +12,7 @@ Plug 'tpope/vim-endwise'
 Plug 'jgdavey/vim-blockle'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'gosukiwi/vim-atom-dark'
 
 call plug#end()
 
@@ -54,14 +55,16 @@ let g:netrw_winsize=32
 let g:netrw_dirhistmax=0
 let g:netrw_preview = 1
 
-set background=light
+set background=dark
 
 " highlight trailing whitespaces
 :autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 :highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 :match ExtraWhitespace /\s\+$/
 
-colorscheme afterglow
+set termguicolors
+" colorscheme afterglow
+colorscheme atom-dark
 
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none

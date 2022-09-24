@@ -115,6 +115,7 @@ map <Leader>k <Plug>(easymotion-k)
 " fzf
 map <Leader>t :Files<CR>
 map <Leader>b :Buffers<CR>
+map <Leader>q :Lines<CR>
 
 " ack
 cnoreabbrev Ack Ack!

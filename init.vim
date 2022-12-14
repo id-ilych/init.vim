@@ -76,6 +76,8 @@ if !exists( "commands_aliases_inited" )
 endif
 
 " hotkeys
+nnoremap <SPACE> <Nop>
+let mapleader=" "
 nmap <C-L> m':Explore %:h<CR>
 nmap th :tabfirst<CR>
 nmap tk :tabnext<CR>
@@ -89,7 +91,7 @@ vmap < <gv
 vmap > >gv
 " copy to system clipboard
 vmap '' "+y
-map <Leader>ff :let @+=expand('%')<CR>
+map <Leader>c :let @+=expand('%')<CR>
 
 " search with */# for selected text
 vnoremap <silent> * :<C-U>
@@ -116,9 +118,9 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
 " fzf
-map <Leader>t :Files<CR>
+map <Leader>f :Files<CR>
 map <Leader>b :Buffers<CR>
-map <Leader>q :Lines<CR>
+map <Leader>l :Lines<CR>
 
 " ack
 cnoreabbrev Ack Ack!

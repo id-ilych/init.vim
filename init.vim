@@ -75,15 +75,19 @@ if !exists( "commands_aliases_inited" )
   command Q q
 endif
 
-" hotkeys
+" set leader key
 nnoremap <SPACE> <Nop>
 let mapleader=" "
+
+" tabs hotkeys
 nmap <Leader>d :tabprev<CR>
 nmap <Leader>f :tabnext<CR>
 nmap <Leader>n :tabedit<CR>
 nmap <Leader>md :-tabm<CR>
 nmap <Leader>mf :+tabm<CR>
 nmap <Leader>mm :tabclose<CR>
+
+" preserve visual selection when (un)indenting
 vmap < <gv
 vmap > >gv
 

@@ -78,7 +78,6 @@ endif
 " hotkeys
 nnoremap <SPACE> <Nop>
 let mapleader=" "
-nmap <C-L> m':Explore %:h<CR>
 nmap th :tabfirst<CR>
 nmap tk :tabnext<CR>
 nmap tj :tabprev<CR>

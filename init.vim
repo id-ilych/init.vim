@@ -125,8 +125,11 @@ nmap <Leader>b :Buffers<CR>
 nmap <Leader>l :Lines<CR>
 
 " ack
-cnoreabbrev Ack Ack!
-nnoremap <Leader>a :Ack!<Space>
+" start searching for text with reasonable defaults:
+"   -F flag that disables regexp
+"   add quotes to search for multiple words
+nnoremap <Leader>a :Ack!<Space>-F<Space>''<Left>
+" use rg if it is available
 if executable('rg')
   let g:ackprg = 'rg --vimgrep'
 endif

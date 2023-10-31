@@ -99,6 +99,8 @@ nmap <Leader>c :let @+=expand('%')<CR>
 " copy current filename:line to the system clipboard
 nmap <Leader>x :let @+=expand('%') . ':' . line('.')<CR>
 
+" do not jump to the next occurence when selecting word with *
+nnoremap * *``
 " search with */# for selected text
 vnoremap <silent> * :<C-U>
   \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>

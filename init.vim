@@ -1,18 +1,19 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'easymotion/vim-easymotion'
-Plug 'scheakur/vim-scheakur'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
-Plug 'rafi/awesome-vim-colorschemes'
+
 Plug 'slim-template/vim-slim'
 Plug 'jparise/vim-graphql'
 Plug 'tpope/vim-endwise'
 Plug 'jgdavey/vim-blockle'
+
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'gosukiwi/vim-atom-dark'
+
+Plug 'rafi/awesome-vim-colorschemes'
 
 call plug#end()
 
@@ -55,7 +56,7 @@ let g:netrw_winsize=32
 let g:netrw_dirhistmax=0
 let g:netrw_preview = 1
 
-set background=dark
+set background=light
 
 " highlight trailing whitespaces
 :autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
@@ -63,8 +64,7 @@ set background=dark
 :match ExtraWhitespace /\s\+$/
 
 set termguicolors
-" colorscheme afterglow
-colorscheme atom-dark
+colorscheme github
 
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none

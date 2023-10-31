@@ -78,14 +78,12 @@ endif
 " hotkeys
 nnoremap <SPACE> <Nop>
 let mapleader=" "
-nmap th :tabfirst<CR>
-nmap tk :tabnext<CR>
-nmap tj :tabprev<CR>
-nmap tl :tablast<CR>
-nmap tt :tabedit<CR>
-nmap tmh :-tabm<CR>
-nmap tml :+tabm<CR>
-nmap td :tabclose<CR>
+nmap <Leader>d :tabprev<CR>
+nmap <Leader>f :tabnext<CR>
+nmap <Leader>n :tabedit<CR>
+nmap <Leader>md :-tabm<CR>
+nmap <Leader>mf :+tabm<CR>
+nmap <Leader>mm :tabclose<CR>
 vmap < <gv
 vmap > >gv
 " copy to system clipboard

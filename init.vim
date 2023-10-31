@@ -11,12 +11,19 @@ Plug 'jparise/vim-graphql'
 Plug 'tpope/vim-endwise'
 Plug 'jgdavey/vim-blockle'
 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'rafi/awesome-vim-colorschemes'
 
 call plug#end()
+
+lua << EOF
+local telescope = require('telescope')
+telescope.setup{}
+telescope.load_extension('fzf')
+EOF
 
 syntax on
 set nocompatible
@@ -126,10 +133,10 @@ let g:EasyMotion_smartcase = 1
 nmap <Leader>j <Plug>(easymotion-j)
 nmap <Leader>k <Plug>(easymotion-k)
 
-" fzf
-nmap <Leader>p :Files<CR>
-nmap <Leader>b :Buffers<CR>
-nmap <Leader>l :Lines<CR>
+" Telescope
+map <Leader>l :Telescope find_files<CR>
+map <Leader>b :Telescope buffers<CR>
+map <Leader>; :Telescope live_grep<CR>
 
 " ack
 " start searching for text with reasonable defaults:

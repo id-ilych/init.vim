@@ -120,9 +120,9 @@ nmap <Leader>j <Plug>(easymotion-j)
 nmap <Leader>k <Plug>(easymotion-k)
 
 " fzf
-map <Leader>f :Files<CR>
-map <Leader>b :Buffers<CR>
-map <Leader>l :Lines<CR>
+nmap <Leader>p :Files<CR>
+nmap <Leader>b :Buffers<CR>
+nmap <Leader>l :Lines<CR>
 
 " ack
 cnoreabbrev Ack Ack!

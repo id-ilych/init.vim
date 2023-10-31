@@ -142,3 +142,11 @@ autocmd TermOpen * startinsert
 
 " configure jq as JSON formatter
 autocmd FileType json set formatprg=jq
+
+" colemak compensation
+nmap <C-S> <C-D>
+nmap <C-L> <C-U>
+nmap <C-Y> <C-O>
+nmap <C-U> <C-I>
+set langmap=dg,ek,fe,gt,il,jy,kn,lu,nj,pr,rs,sd,tf,ui,yo,o\\;,\\;p,DG,EK,FE,GT,IL,JY,KN,LU,NJ,PR,RS,SD,TF,UI,YO,O:,:P
+

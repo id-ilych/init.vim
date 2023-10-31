@@ -139,3 +139,6 @@ let g:blockle_mapping = '<Leader>]'
 
 " automatically start insert mode when using :te[rminal]
 autocmd TermOpen * startinsert
+
+" configure jq as JSON formatter
+autocmd FileType json set formatprg=jq

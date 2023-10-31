@@ -86,10 +86,14 @@ nmap <Leader>mf :+tabm<CR>
 nmap <Leader>mm :tabclose<CR>
 vmap < <gv
 vmap > >gv
-" copy to system clipboard
+
+" clipboard
+" copy selection to system clipboard
 vmap '' "+y
-map <Leader>c :let @+=expand('%')<CR>
-map <Leader>x :let @+=expand('%') . ':' . line('.')<CR>
+" copy current filename to the system clipboard
+nmap <Leader>c :let @+=expand('%')<CR>
+" copy current filename:line to the system clipboard
+nmap <Leader>x :let @+=expand('%') . ':' . line('.')<CR>
 
 " search with */# for selected text
 vnoremap <silent> * :<C-U>

@@ -128,7 +128,7 @@ xnoremap p pgvy
 " easymotion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 " nmap w <Plug>(easymotion-overwin-f)
-nmap <Leader><Leader>f <Plug>(easymotion-overwin-f2)
+nmap <Leader>s <Plug>(easymotion-overwin-f2)
 let g:EasyMotion_smartcase = 1
 nmap <Leader>j <Plug>(easymotion-j)
 nmap <Leader>k <Plug>(easymotion-k)

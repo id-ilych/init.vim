@@ -125,6 +125,10 @@ vnoremap <silent> # :<C-U>
 " do not overwrite default buffer on paste
 xnoremap p pgvy
 
+" split pane
+nmap <Leader>v :vsplit<CR>
+nmap <Leader>h :split<CR>
+
 " easymotion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 " nmap w <Plug>(easymotion-overwin-f)

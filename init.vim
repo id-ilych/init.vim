@@ -83,6 +83,9 @@ if !exists( "commands_aliases_inited" )
   command Q q
 endif
 
+" disable mouse
+set mouse=
+
 " set leader key
 nnoremap <SPACE> <Nop>
 let mapleader=" "

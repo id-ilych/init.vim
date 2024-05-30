@@ -1,40 +1,3 @@
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
-end
-vim.opt.rtp:prepend(lazypath)
-
-require("lazy").setup({
-  'easymotion/vim-easymotion',
-  'mileszs/ack.vim',
-  'tpope/vim-surround',
-  'tpope/vim-repeat',
-  'tpope/vim-vinegar',
-
-  'slim-template/vim-slim',
-  'jparise/vim-graphql',
-  'tpope/vim-endwise',
-  'jgdavey/vim-blockle',
-
-  'junegunn/vim-slash',
-
-  { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
-  { 'nvim-telescope/telescope.nvim', tag = '0.1.6', dependencies = { 'nvim-lua/plenary.nvim' } },
-
-  'rafi/awesome-vim-colorschemes'
-})
-
-local telescope = require('telescope')
-telescope.setup{}
-telescope.load_extension('fzf')
-
 vim.cmd('filetype plugin on')
 
 vim.o.number = true -- show line numbers on the left
@@ -80,9 +43,55 @@ vim.g.netrw_winsize=32
 vim.g.netrw_dirhistmax=0
 vim.g.netrw_preview = 1
 
-vim.o.background = 'light'
+-- Colemak compensation
+vim.api.nvim_set_keymap('n', '<C-L>', '<C-U>', {})
+vim.api.nvim_set_keymap('n', '<C-Y>', '<C-O>', {})
+vim.api.nvim_set_keymap('n', '<C-U>', '<C-I>', {})
+vim.api.nvim_set_keymap('n', '<C-P>', '<C-R>', {})
+vim.api.nvim_set_keymap('n', '<C-S>', '<C-D>', {})
+vim.o.langmap="dg,ek,fe,gt,il,jy,kn,lu,nj,pr,rs,sd,tf,ui,yo,o\\;,\\;p,DG,EK,FE,GT,IL,JY,KN,LU,NJ,PR,RS,SD,TF,UI,YO,O:,:P"
+
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+require("lazy").setup({
+  'easymotion/vim-easymotion',
+  'mileszs/ack.vim',
+  'tpope/vim-surround',
+  'tpope/vim-repeat',
+  'tpope/vim-vinegar',
+
+  'slim-template/vim-slim',
+  'jparise/vim-graphql',
+  'tpope/vim-endwise',
+  'jgdavey/vim-blockle',
+
+  'junegunn/vim-slash',
+
+  { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
+  { 'nvim-telescope/telescope.nvim', tag = '0.1.6', dependencies = { 'nvim-lua/plenary.nvim' } },
+
+  'rafi/awesome-vim-colorschemes',
+  'Arkham/vim-tango',
+})
+
+local telescope = require('telescope')
+telescope.setup{}
+telescope.load_extension('fzf')
+
+vim.o.background = 'dark'
 vim.o.termguicolors = true
-vim.cmd('colorscheme github')
+vim.cmd('colorscheme tango')
 
 -- vim.cmd('highlight Normal ctermbg=none')
 -- vim.cmd('highlight NonText ctermbg=none')
@@ -149,12 +158,4 @@ vim.cmd([[
 -- vim-blockle
 vim.g.blockle_mapping = '<Leader>]'
 vim.api.nvim_set_keymap('n', '<Leader>]', '<Plug>BlockToggle', {})
-
--- Colemak compensation
-vim.api.nvim_set_keymap('n', '<C-L>', '<C-U>', {})
-vim.api.nvim_set_keymap('n', '<C-Y>', '<C-O>', {})
-vim.api.nvim_set_keymap('n', '<C-U>', '<C-I>', {})
-vim.api.nvim_set_keymap('n', '<C-P>', '<C-R>', {})
-vim.api.nvim_set_keymap('n', '<C-S>', '<C-D>', {})
-vim.o.langmap="dg,ek,fe,gt,il,jy,kn,lu,nj,pr,rs,sd,tf,ui,yo,o\\;,\\;p,DG,EK,FE,GT,IL,JY,KN,LU,NJ,PR,RS,SD,TF,UI,YO,O:,:P"
 

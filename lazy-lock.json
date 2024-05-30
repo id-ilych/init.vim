@@ -13,5 +13,6 @@
   "vim-slash": { "branch": "master", "commit": "31aee09b7ea8893a18fa34f65e63e364fc998444" },
   "vim-slim": { "branch": "master", "commit": "a0a57f75f20a03d5fa798484743e98f4af623926" },
   "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
+  "vim-tango": { "branch": "master", "commit": "0835f5b02ddddca4fe30f927216464aa3df8fca1" },
   "vim-vinegar": { "branch": "master", "commit": "bb1bcddf43cfebe05eb565a84ab069b357d0b3d6" }
 }

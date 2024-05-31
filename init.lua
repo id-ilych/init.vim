@@ -149,11 +149,9 @@ vim.api.nvim_set_keymap('n', '<Leader>;', ':Telescope live_grep<CR>', {})
 --   add quotes to search for multiple words
 vim.api.nvim_set_keymap('n', '<Leader>a', ":Ack!<Space>-F<Space>''<Left>", { noremap = true })
 -- use rg if it is available
-vim.cmd([[
-	if executable('rg')
-	  let g:ackprg = 'rg --vimgrep'
-	endif
-]])
+if vim.fn.executable('rg') == 1 then
+  vim.g.ackprg = 'rg --vimgrep'
+end
 
 -- vim-blockle
 vim.g.blockle_mapping = '<Leader>]'

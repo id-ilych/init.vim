@@ -156,3 +156,9 @@ end
 vim.g.blockle_mapping = '<Leader>]'
 vim.api.nvim_set_keymap('n', '<Leader>]', '<Plug>BlockToggle', {})
 
+--- automatically open quick-fix pane after make if there are errors, close it otherwise
+vim.api.nvim_create_autocmd({'QuickFixCmdPost'}, {
+  pattern = {'*'},
+  command = 'botright cw | wincmd p'
+})
+

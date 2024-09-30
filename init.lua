@@ -126,6 +126,9 @@ vim.api.nvim_set_keymap('x', 'p', 'pgvy', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>v', ':vsplit<CR>', {})
 vim.api.nvim_set_keymap('n', '<Leader>h', ':split<CR>', {})
 
+-- stop highligting search matches by Esc
+vim.api.nvim_set_keymap('n', '<esc>', ':noh<return><esc>', { noremap = true })
+
 -- easymotion
 vim.g.EasyMotion_do_mapping = 0 -- Disable default mappings
 -- nmap w <Plug>(easymotion-overwin-f)

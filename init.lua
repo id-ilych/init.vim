@@ -73,7 +73,6 @@ require("lazy").setup({
   'slim-template/vim-slim',
   'jparise/vim-graphql',
   'tpope/vim-endwise',
-  'jgdavey/vim-blockle',
 
   { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
   { 'nvim-telescope/telescope.nvim', tag = '0.1.6', dependencies = { 'nvim-lua/plenary.nvim' } },
@@ -149,10 +148,6 @@ vim.api.nvim_set_keymap('n', '<Leader>a', ":Ack!<Space>-F<Space>''<Left>", { nor
 if vim.fn.executable('rg') == 1 then
   vim.g.ackprg = 'rg --vimgrep'
 end
-
--- vim-blockle
-vim.g.blockle_mapping = '<Leader>]'
-vim.api.nvim_set_keymap('n', '<Leader>]', '<Plug>BlockToggle', {})
 
 --- automatically open quick-fix pane after make if there are errors, close it otherwise
 vim.api.nvim_create_autocmd({'QuickFixCmdPost'}, {

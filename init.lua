@@ -154,7 +154,7 @@ end
 
 --- automatically open quick-fix pane after make if there are errors, close it otherwise
 vim.api.nvim_create_autocmd({'QuickFixCmdPost'}, {
-  pattern = {'*'},
+  pattern = {'*.c', '*.cpp', '*.h', '*.hpp', 'Makefile'},
   command = 'botright cw | wincmd p'
 })
 

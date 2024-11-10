@@ -44,12 +44,12 @@ vim.g.netrw_dirhistmax=0
 vim.g.netrw_preview = 1
 
 -- Colemak compensation
-vim.api.nvim_set_keymap('n', '<C-L>', '<C-U>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-Y>', '<C-O>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-U>', '<C-I>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-P>', '<C-R>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-S>', '<C-D>', { noremap = true })
-vim.o.langmap="dg,ek,fe,gt,il,jy,kn,lu,nj,pr,rs,sd,tf,ui,yo,o\\;,\\;p,DG,EK,FE,GT,IL,JY,KN,LU,NJ,PR,RS,SD,TF,UI,YO,O:,:P"
+-- vim.api.nvim_set_keymap('n', '<C-L>', '<C-U>', { noremap = true })
+-- vim.api.nvim_set_keymap('n', '<C-Y>', '<C-O>', { noremap = true })
+-- vim.api.nvim_set_keymap('n', '<C-U>', '<C-I>', { noremap = true })
+-- vim.api.nvim_set_keymap('n', '<C-P>', '<C-R>', { noremap = true })
+-- vim.api.nvim_set_keymap('n', '<C-S>', '<C-D>', { noremap = true })
+-- vim.o.langmap="dg,ek,fe,gt,il,jy,kn,lu,nj,pr,rs,sd,tf,ui,yo,o\\;,\\;p,DG,EK,FE,GT,IL,JY,KN,LU,NJ,PR,RS,SD,TF,UI,YO,O:,:P"
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then

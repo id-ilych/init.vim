@@ -79,6 +79,8 @@ require("lazy").setup({
 
   'rafi/awesome-vim-colorschemes',
   'Arkham/vim-tango',
+
+  'github/copilot.vim',
 })
 
 local telescope = require('telescope')
@@ -157,4 +159,11 @@ vim.api.nvim_create_autocmd({'QuickFixCmdPost'}, {
   pattern = {'*.c', '*.cpp', '*.h', '*.hpp', 'Makefile'},
   command = 'botright cw | wincmd p'
 })
+
+-- Copilot hotkeys (by default the suggestion is accepted by <Tab> which is annoying when I just want to indent)
+vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
+  expr = true,
+  replace_keycodes = false
+})
+vim.g.copilot_no_tab_map = true
 

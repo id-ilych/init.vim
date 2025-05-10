@@ -87,9 +87,14 @@ local telescope = require('telescope')
 telescope.setup{}
 telescope.load_extension('fzf')
 
-vim.o.background = 'dark'
 vim.o.termguicolors = true
-vim.cmd('colorscheme tango')
+if os.getenv('NEOVIM_DARK') or os.getenv('NVIM_DARK')  then
+  vim.o.background = 'dark'
+  vim.cmd('colorscheme tango')
+else
+  vim.o.background = 'light'
+  vim.cmd('colorscheme github')
+end
 
 -- vim.cmd('highlight Normal ctermbg=none')
 -- vim.cmd('highlight NonText ctermbg=none')

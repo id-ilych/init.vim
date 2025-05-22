@@ -77,6 +77,8 @@ require("lazy").setup({
   { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
   { 'nvim-telescope/telescope.nvim', tag = '0.1.6', dependencies = { 'nvim-lua/plenary.nvim' } },
 
+  'rakr/vim-one',
+  'catppuccin/nvim',
   'rafi/awesome-vim-colorschemes',
   'Arkham/vim-tango',
 
@@ -93,7 +95,8 @@ if os.getenv('NEOVIM_DARK') or os.getenv('NVIM_DARK')  then
   vim.cmd('colorscheme tango')
 else
   vim.o.background = 'light'
-  vim.cmd('colorscheme github')
+  vim.g.one_allow_italics = 1 -- italic comments
+  vim.cmd('colorscheme one')
 end
 
 -- vim.cmd('highlight Normal ctermbg=none')

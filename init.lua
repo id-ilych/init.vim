@@ -97,10 +97,11 @@ else
   vim.o.background = 'light'
   vim.g.one_allow_italics = 1 -- italic comments
   vim.cmd('colorscheme one')
+  -- see :help syntax.txt it will visually present current config for all syntax groups
+  vim.cmd('highlight StatusLineNC guifg=black') -- Status lines of not-current windows (otherwise it's gray on gray).
+  vim.cmd('highlight PmenuThumb guifg=white') -- Popup menu: Thumb of the scrollbar (otherwise it's black on black).
 end
 
--- vim.cmd('highlight Normal ctermbg=none')
--- vim.cmd('highlight NonText ctermbg=none')
 
 vim.cmd('command! W w')
 vim.cmd('command! Q q')

@@ -127,8 +127,12 @@ vim.api.nvim_set_keymap('v', '>', '>gv', {})
 vim.api.nvim_set_keymap('v', "''", '"+y', {})
 -- copy current filename to the system clipboard
 vim.api.nvim_set_keymap('n', '<Leader>c', ":let @+=expand('%')<CR>", {})
+-- copy bundle exec rspec command to run current spec to the system clipboard
+vim.api.nvim_set_keymap('n', '<Leader>C', ":let @+='bundle exec rspec ' . expand('%')<CR>", {})
 -- copy current filename:line to the system clipboard
 vim.api.nvim_set_keymap('n', '<Leader>x', ":let @+=expand('%') . ':' . line('.')<CR>", {})
+-- copy bundle exec rspec command to run current spec line to the system clipboard
+vim.api.nvim_set_keymap('n', '<Leader>X', ":let @+='bundle exec rspec ' . expand('%') . ':' . line('.')<CR>", {})
 
 -- do not overwrite default buffer on paste
 vim.api.nvim_set_keymap('x', 'p', 'pgvy', { noremap = true })

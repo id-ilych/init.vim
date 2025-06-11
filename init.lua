@@ -161,7 +161,7 @@ vim.api.nvim_set_keymap('n', '<Leader>;', ':Telescope live_grep<CR>', {})
 -- start searching for text with reasonable defaults:
 --   -F flag that disables regexp
 --   add quotes to search for multiple words
-vim.api.nvim_set_keymap('n', '<Leader>a', ":Ack!<Space>-F<Space>''<Left>", { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>a', ":Ack!<Space>--hidden<Space>-F<Space>''<Left>", { noremap = true })
 -- use rg if it is available
 if vim.fn.executable('rg') == 1 then
   vim.g.ackprg = 'rg --vimgrep'

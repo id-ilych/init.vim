@@ -86,7 +86,18 @@ require("lazy").setup({
 })
 
 local telescope = require('telescope')
-telescope.setup{}
+telescope.setup{
+  pickers = {
+    buffers = {
+      sort_lastused = true,
+      ignore_current_buffer = true,
+      mappings = {
+        i = { ["<c-d>"] = "delete_buffer" },
+        n = { ["<c-d>"] = "delete_buffer" },
+      },
+    },
+  },
+}
 telescope.load_extension('fzf')
 
 vim.o.termguicolors = true
@@ -96,12 +107,12 @@ if os.getenv('NEOVIM_DARK') or os.getenv('NVIM_DARK')  then
 else
   vim.o.background = 'light'
   vim.g.one_allow_italics = 1 -- italic comments
+
   vim.cmd('colorscheme one')
   -- see :help syntax.txt it will visually present current config for all syntax groups
   vim.cmd('highlight StatusLineNC guifg=black') -- Status lines of not-current windows (otherwise it's gray on gray).
   vim.cmd('highlight PmenuThumb guifg=white') -- Popup menu: Thumb of the scrollbar (otherwise it's black on black).
 end
-
 
 vim.cmd('command! W w')
 vim.cmd('command! Q q')

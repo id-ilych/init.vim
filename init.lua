@@ -199,6 +199,7 @@ vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
   replace_keycodes = false
 })
 vim.g.copilot_no_tab_map = true
+vim.cmd('Copilot disable')
 -- Cycle through color schemes
 local colorschemes = vim.fn.getcompletion("", "color")
 local colorschemes_idx = vim.fn.index(

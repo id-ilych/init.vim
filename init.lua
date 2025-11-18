@@ -121,6 +121,15 @@ vim.cmd('command! Q q')
 vim.api.nvim_set_keymap('n', '<SPACE>', '<Nop>', { noremap = true })
 vim.g.mapleader = ' '
 
+-- misc hotkeys
+vim.api.nvim_set_keymap('n', '<Leader>w', ':write<CR>', {})
+vim.api.nvim_set_keymap('n', '<Leader>W', ':wall<CR>', {})
+vim.api.nvim_set_keymap('n', '<Leader>q', ':close<CR>', {})
+vim.api.nvim_set_keymap('n', '<Leader>.', ':noh<CR>', {})
+
+-- disable K (keyword lookup)
+vim.api.nvim_set_keymap('n', '<S-k>', '<Nop>', {})
+
 -- tabs hotkeys
 vim.api.nvim_set_keymap('n', '<Leader>d', ':tabprev<CR>', {})
 vim.api.nvim_set_keymap('n', '<Leader>f', ':tabnext<CR>', {})
@@ -221,11 +230,11 @@ local function change_colorscheme(forward)
     print(colorschemes[colorschemes_idx])
 end
 
-vim.keymap.set("n", "<C-h>", function()
+vim.keymap.set("n", "<Leader>]", function()
     change_colorscheme(true)
 end)
 
-vim.keymap.set("n", "<C-l>", function()
+vim.keymap.set("n", "<Leader>[", function()
     change_colorscheme(false)
 end)
 

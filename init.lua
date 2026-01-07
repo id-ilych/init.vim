@@ -37,6 +37,8 @@ vim.o.mouse='' -- disable mouse
 
 vim.o.shortmess = 'I' -- disable intro screen
 
+vim.o.inccommand = 'split' -- preview global substitution in a temporary split buffer
+
 -- netrw tweaks
 vim.g.netrw_liststyle=0
 vim.g.netrw_banner=0

@@ -35,6 +35,8 @@ vim.o.foldlevelstart = 20   -- make sure folds are opened on start
 
 vim.o.mouse='' -- disable mouse
 
+vim.o.shortmess = 'I' -- disable intro screen
+
 -- netrw tweaks
 vim.g.netrw_liststyle=0
 vim.g.netrw_banner=0

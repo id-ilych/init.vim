@@ -243,3 +243,17 @@ vim.keymap.set("n", "<Leader>[", function()
     change_colorscheme(false)
 end)
 
+-- markdown
+local markdown = require("markdown")
+vim.api.nvim_create_user_command("MDTable", function(opts)
+  local first, last = opts.line1 - 1, opts.line2
+  local lines = vim.api.nvim_buf_get_lines(0, first, last, false)
+
+  local formatted, err = markdown.format_table(lines)
+  if not formatted then
+    vim.notify(err, vim.log.levels.ERROR)
+    return
+  end
+
+  vim.api.nvim_buf_set_lines(0, first, last, false, formatted)
+end, { range = true })

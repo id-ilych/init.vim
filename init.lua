@@ -168,6 +168,27 @@ vim.api.nvim_set_keymap('n', '<Leader>h', ':split<CR>', {})
 -- stop highligting search matches by Esc
 vim.api.nvim_set_keymap('n', '<esc>', ':noh<return><esc>', { noremap = true })
 
+-- remember last :make command and repeat by hotkey
+vim.api.nvim_create_autocmd("CmdlineLeave", {
+  pattern = ':',
+  callback = function()
+    if vim.v.event.abort then return end
+
+    local cmd = vim.fn.getcmdline()
+    if cmd:match('^%s*make%f[%A]') then
+      vim.g.last_make = cmd
+    end
+  end,
+})
+
+vim.keymap.set("n", "<Leader>i", function()
+  if vim.g.last_make then
+    vim.cmd(vim.g.last_make)
+  else
+    vim.cmd(":make")
+  end
+end, { desc = "Repeat last :make" })
+
 -- easymotion
 vim.g.EasyMotion_do_mapping = 0 -- Disable default mappings
 -- nmap w <Plug>(easymotion-overwin-f)
